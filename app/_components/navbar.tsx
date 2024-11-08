@@ -47,7 +47,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <UserButton />
+      <UserButton showName />
     </nav>
   );
 }
