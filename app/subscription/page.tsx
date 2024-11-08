@@ -1,7 +1,15 @@
 import React from "react";
 import Navbar from "../_components/navbar";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-function Subscription() {
+async function Subscription() {
+  const { userId } = await auth();
+
+  if (!userId) {
+    redirect("/login");
+  }
+
   return (
     <>
       <Navbar />
