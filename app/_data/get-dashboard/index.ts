@@ -3,10 +3,11 @@ import { TransactionType } from "@prisma/client";
 import { TotalExpensePerCategory, TransactionPercentagePerType } from "./types";
 
 async function getDashboard(month: string) {
+  const currentYear = new Date().getFullYear();
   const where = {
     date: {
-      gte: new Date(`2024-${month}-01`),
-      lt: new Date(`2024-${month}-31`),
+      gte: new Date(`${currentYear}-${month}-01`),
+      lt: new Date(`${currentYear}-${month}-31`),
     },
   };
 
@@ -81,6 +82,12 @@ async function getDashboard(month: string) {
     };
   });
 
+  const lastTransactions = await db.transaction.findMany({
+    where,
+    orderBy: { date: "desc" },
+    take: 10,
+  });
+
   return {
     balance,
     totalDeposits,
@@ -88,6 +95,7 @@ async function getDashboard(month: string) {
     totalInvestments,
     typesPercentage,
     totalExpensePerCategory,
+    lastTransactions,
   };
 }
 
