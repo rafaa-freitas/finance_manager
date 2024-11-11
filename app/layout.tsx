@@ -27,7 +27,7 @@ export default function RootLayout({
             variables: { colorPrimary: "#55B02E" },
           }}
         >
-          {children}
+          <div className="flex h-full flex-col overflow-hidden">{children}</div>
         </ClerkProvider>
       </body>
     </html>

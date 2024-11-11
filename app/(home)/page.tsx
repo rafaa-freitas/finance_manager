@@ -34,14 +34,14 @@ async function Home({ searchParams: { month } }: HomeProps) {
   return (
     <>
       <Navbar />
-      <div className="space-y-6 p-6">
+      <div className="flex flex-col space-y-6 overflow-hidden p-6">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold">Dashboard</h1>
 
           <TimeSelect />
         </div>
-        <div className="grid grid-cols-[2fr,1fr] gap-6">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-[2fr,1fr] gap-6 overflow-hidden">
+          <div className="flex flex-col gap-6 overflow-hidden">
             <SummaryCards {...dashboardData} />
 
             <div className="grid grid-cols-3 grid-rows-1 gap-6">
@@ -53,9 +53,7 @@ async function Home({ searchParams: { month } }: HomeProps) {
             </div>
           </div>
 
-          <LastTransactions
-            lastTransactions={dashboardData.lastTransactions}
-          ></LastTransactions>
+          <LastTransactions lastTransactions={dashboardData.lastTransactions} />
         </div>
       </div>
     </>
