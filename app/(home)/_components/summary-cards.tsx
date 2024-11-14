@@ -12,6 +12,7 @@ interface SummaryCardsProps {
   totalDeposits: number;
   totalExpenses: number;
   totalInvestments: number;
+  canUserAddTransactions: boolean;
 }
 
 async function SummaryCards({
@@ -19,6 +20,7 @@ async function SummaryCards({
   totalDeposits,
   totalExpenses,
   totalInvestments,
+  canUserAddTransactions,
 }: SummaryCardsProps) {
   return (
     <div className="space-y-6">
@@ -27,6 +29,7 @@ async function SummaryCards({
         title="Saldo"
         amount={balance}
         size="large"
+        canUserAddTransactions={canUserAddTransactions}
       />
 
       <div className="grid grid-cols-3 gap-6">
@@ -34,18 +37,21 @@ async function SummaryCards({
           icon={<PiggyBankIcon size={16} />}
           title="Investido"
           amount={totalInvestments}
+          canUserAddTransactions={canUserAddTransactions}
         />
 
         <SummaryCard
           icon={<TrendingUpIcon size={16} className="text-primary" />}
           title="Receita"
           amount={totalDeposits}
+          canUserAddTransactions={canUserAddTransactions}
         />
 
         <SummaryCard
           icon={<TrendingDownIcon size={16} className="text-red-500" />}
           title="Despesas"
           amount={totalExpenses}
+          canUserAddTransactions={canUserAddTransactions}
         />
       </div>
     </div>
