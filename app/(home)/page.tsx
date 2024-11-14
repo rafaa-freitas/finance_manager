@@ -11,6 +11,7 @@ import ExpensesPerCategory from "./_components/expenses-per-category";
 import LastTransactions from "./_components/last-transactions";
 import { canUserAddTransaction } from "../_data/can-user-add-transactions";
 import AiReportButton from "./_components/ai-report-button";
+import { hasPremiumPlan } from "../_data/has-premium-plan";
 
 interface HomeProps {
   searchParams: {
@@ -31,6 +32,7 @@ async function Home({ searchParams: { month } }: HomeProps) {
     redirect(`/?month=${new Date().getMonth() + 1}`);
   }
 
+  const hasUserPremiumPlan = await hasPremiumPlan();
   const dashboardData = await getDashboard(month);
 
   const canUserAddTransactions = await canUserAddTransaction();
@@ -43,7 +45,7 @@ async function Home({ searchParams: { month } }: HomeProps) {
           <h1 className="text-2xl font-bold">Dashboard</h1>
 
           <div className="flex items-center gap-3">
-            <AiReportButton month={month} />
+            <AiReportButton month={month} hasPremiumPlan={hasUserPremiumPlan} />
 
             <TimeSelect />
           </div>

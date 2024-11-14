@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../_components/navbar";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { Card, CardContent, CardHeader } from "../_components/ui/card";
 import { CheckIcon, XIcon } from "lucide-react";
 import AcquirePlanButton from "./components/acquire-plan-button";
 import { Badge } from "../_components/ui/badge";
 import { getCurrentMonthTransactions } from "../_data/get-current-month-transactions";
+import { hasPremiumPlan } from "../_data/has-premium-plan";
 
 async function Subscription() {
   const { userId } = await auth();
@@ -15,11 +16,9 @@ async function Subscription() {
     redirect("/login");
   }
 
-  const user = await (await clerkClient()).users.getUser(userId);
-
   const currentMonthTransactions = await getCurrentMonthTransactions();
 
-  const hasPremiumPlan = user?.publicMetadata.subscriptionPlan == "premium";
+  const hasUserPremiumPlan = await hasPremiumPlan();
 
   return (
     <>
@@ -31,7 +30,7 @@ async function Subscription() {
         <div className="flex gap-6">
           <Card className="w-[450px]">
             <CardHeader className="border-b border-solid py-8">
-              {!hasPremiumPlan && (
+              {!hasUserPremiumPlan && (
                 <Badge className="absolute left-4 top-12 bg-primary/15 text-primary hover:bg-primary/15">
                   Ativo
                 </Badge>
@@ -64,7 +63,7 @@ async function Subscription() {
 
           <Card className="w-[450px]">
             <CardHeader className="relative border-b border-solid py-8">
-              {hasPremiumPlan && (
+              {hasUserPremiumPlan && (
                 <Badge className="absolute left-4 top-12 bg-primary/15 text-primary hover:bg-primary/15">
                   Ativo
                 </Badge>

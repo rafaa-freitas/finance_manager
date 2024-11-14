@@ -28,9 +28,9 @@ function AcquirePlanButton() {
     await stripe.redirectToCheckout({ sessionId });
   }
 
-  const hasPremiumPlan = user?.publicMetadata.subscriptionPlan == "premium";
+  const hasUserPremiumPlan = user?.publicMetadata.subscriptionPlan == "premium";
 
-  if (hasPremiumPlan) {
+  if (hasUserPremiumPlan) {
     return (
       <Button className="w-full rounded-full font-bold" variant="link" asChild>
         <Link
