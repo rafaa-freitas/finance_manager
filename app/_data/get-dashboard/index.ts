@@ -103,7 +103,7 @@ async function getDashboard(month: string) {
     totalInvestments,
     typesPercentage,
     totalExpensePerCategory,
-    lastTransactions,
+    lastTransactions: JSON.parse(JSON.stringify(lastTransactions)),
   };
 }
 
