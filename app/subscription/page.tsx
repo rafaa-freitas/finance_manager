@@ -29,7 +29,7 @@ async function Subscription() {
 
         <div className="flex gap-6">
           <Card className="w-[450px]">
-            <CardHeader className="border-b border-solid py-8">
+            <CardHeader className="relative border-b border-solid py-8">
               {!hasUserPremiumPlan && (
                 <Badge className="absolute left-4 top-12 bg-primary/15 text-primary hover:bg-primary/15">
                   Ativo
