@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+  <img
+    src="public/logo.svg"
+    title="Logo Finance AI"
+    alt="Logo Finance AI"
+    width="150px"
+  />
+  
+</h1>
 
-## Getting Started
+<p align="center">    
+  <a href="#tecnologias"> Tecnologias </a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;        
+  <a href="#como-executar"> Como executar </a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;          
+  <a href="#projeto"> Projeto </a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;  
+</p>
 
-First, run the development server:
+<p>
+  <img src="public/cover.png" alt="Capa do projeto" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div id="tecnologias">
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://nextjs.org/'>NextJs</a>
+  </div>
+  
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://reactjs.org'>React</a>
+  </div>
 
-## Learn More
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://www.typescriptlang.org/'>Typescript</a>
+  </div>
 
-To learn more about Next.js, take a look at the following resources:
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://tailwindcss.com/'>Tailwind</a>
+  </div>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://ui.shadcn.com/'>Shadcn UI</a>
+  </div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://react-hook-form.com/'>React Hook Form</a>
+  </div>
 
-## Deploy on Vercel
+  <div style="display: flex; align-items: center; gap: 8px">
+    <a href='https://zod.dev/'>Zod</a>
+  </div>
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<div id="como-executar">
+</div>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Como executar
+
+Acesse o link -> https://finance-ai-livid.vercel.app/
+
+<div id="projeto">
+</div>
+
+## 💻 Projeto
+
+Finance AI é uma versão simplificada de um sistema de gerenciamento de finanças.
+
+Nele é possível registrar transações de investimento, depósito ou despesa, assim como acompanhar o balanço do mês através de graficos e gerar um relatório com IA para identificar gastos desnecessários e otimizar a gestão financeira.
