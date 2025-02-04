@@ -59,7 +59,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🚀 Como executar
 
-Acesse o link -> https://finance-ai-livid.vercel.app/
+Acesse o link -> https://finance-manager-livid.vercel.app//
 
 <div id="projeto">
 </div>
