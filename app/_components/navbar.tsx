@@ -12,13 +12,13 @@ function Navbar() {
   return (
     <nav className="flex justify-between border-b border-solid px-8 py-4">
       <div className="flex items-center gap-10">
-        <Image src="./logo.svg" alt="Finance AI" width={173} height={39} />
+        <Image src="./logo.svg" alt="Finance Manager" width={200} height={28} />
         <Link
           href="/"
           className={
-            pathname === "/"
+            (pathname === "/"
               ? "font-bold text-primary"
-              : "text-muted-foreground"
+              : "text-muted-foreground") + " pt-[6px]"
           }
         >
           Dashboard
@@ -27,9 +27,9 @@ function Navbar() {
         <Link
           href="/transactions"
           className={
-            pathname === "/transactions"
+            (pathname === "/transactions"
               ? "font-bold text-primary"
-              : "text-muted-foreground"
+              : "text-muted-foreground") + " pt-[6px]"
           }
         >
           Transações
@@ -38,9 +38,9 @@ function Navbar() {
         <Link
           href="/subscription"
           className={
-            pathname === "/subscription"
+            (pathname === "/subscription"
               ? "font-bold text-primary"
-              : "text-muted-foreground"
+              : "text-muted-foreground") + " pt-[6px]"
           }
         >
           Assinatura

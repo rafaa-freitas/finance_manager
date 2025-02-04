@@ -31,7 +31,7 @@ async function Subscription() {
           <Card className="w-[450px]">
             <CardHeader className="relative border-b border-solid py-8">
               {!hasUserPremiumPlan && (
-                <Badge className="absolute left-4 top-12 bg-primary/15 text-primary hover:bg-primary/15">
+                <Badge className="text-success-foreground absolute left-4 top-12 bg-success/15 hover:bg-success/15">
                   Ativo
                 </Badge>
               )}
@@ -48,7 +48,7 @@ async function Subscription() {
 
             <CardContent className="space-y-6 py-8">
               <div className="flex items-center gap-2">
-                <CheckIcon className="text-primary" />
+                <CheckIcon className="text-success" />
                 <p>
                   Apenas 10 transações por mês ({currentMonthTransactions}/10)
                 </p>
@@ -64,7 +64,7 @@ async function Subscription() {
           <Card className="w-[450px]">
             <CardHeader className="relative border-b border-solid py-8">
               {hasUserPremiumPlan && (
-                <Badge className="absolute left-4 top-12 bg-primary/15 text-primary hover:bg-primary/15">
+                <Badge className="absolute left-4 top-12 bg-success/15 text-success hover:bg-success/15">
                   Ativo
                 </Badge>
               )}
@@ -81,12 +81,12 @@ async function Subscription() {
 
             <CardContent className="space-y-6 py-8">
               <div className="flex items-center gap-2">
-                <CheckIcon className="text-primary" />
+                <CheckIcon className="text-success" />
                 <p>Transações ilimitadas</p>
               </div>
 
               <div className="flex items-center gap-2">
-                <CheckIcon className="text-primary" />
+                <CheckIcon className="text-success" />
                 <p>Relatórios de IA</p>
               </div>
 

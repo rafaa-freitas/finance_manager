@@ -1,9 +1,9 @@
 <h1 align="center">
   <img
     src="public/logo.svg"
-    title="Logo Finance AI"
-    alt="Logo Finance AI"
-    width="150px"
+    title="Logo Finance Manager"
+    alt="Logo Finance Manager"
+    width="280px"
   />
   
 </h1>
@@ -67,6 +67,6 @@ Acesse o link -> https://finance-ai-livid.vercel.app/
 
 ## 💻 Projeto
 
-Finance AI é uma versão simplificada de um sistema de gerenciamento de finanças.
+Finance Manager é uma versão simplificada de um sistema de gerenciamento de finanças.
 
 Nele é possível registrar transações de investimento, depósito ou despesa, assim como acompanhar o balanço do mês através de graficos e gerar um relatório com IA para identificar gastos desnecessários e otimizar a gestão financeira.

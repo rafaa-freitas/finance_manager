@@ -11,8 +11,8 @@ function TransactionTypeBadge({ transaction }: TransactionTypeBadgeProps) {
   switch (transaction.type) {
     case TransactionType.DEPOSIT:
       return (
-        <Badge className="bg-muted font-bold text-primary hover:bg-muted">
-          <CircleIcon className="mr-2 fill-primary" size={10}></CircleIcon>
+        <Badge className="bg-success/10 font-bold text-success hover:bg-success/10">
+          <CircleIcon className="mr-2 fill-success" size={10}></CircleIcon>
           Depósito
         </Badge>
       );

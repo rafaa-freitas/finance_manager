@@ -18,7 +18,7 @@ function SummaryCard({
   canUserAddTransactions,
 }: SummaryCardProps) {
   return (
-    <Card className={size === "large" ? "bg-white bg-opacity-5" : ""}>
+    <Card className={"bg-card " + (size === "large" ? "bg-card" : "")}>
       <CardHeader className="flex-row items-center gap-4">
         {icon}
 

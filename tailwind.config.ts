@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         danger: "#f6352e",
+        success: "#55B02E",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

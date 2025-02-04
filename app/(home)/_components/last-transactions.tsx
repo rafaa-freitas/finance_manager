@@ -19,7 +19,7 @@ function LastTransactions({ lastTransactions }: LastTransactionsProps) {
         return "text-red-500";
 
       case TransactionType.DEPOSIT:
-        return "text-primary";
+        return "text-success";
 
       case TransactionType.INVESTMENT:
         return "text-white";
@@ -36,7 +36,7 @@ function LastTransactions({ lastTransactions }: LastTransactionsProps) {
 
   return (
     <>
-      <ScrollArea className="rounded-md border">
+      <ScrollArea className="rounded-md border bg-card">
         <CardHeader className="flex-row items-center justify-between">
           <CardTitle className="font-bold">Últimas Transações</CardTitle>
 

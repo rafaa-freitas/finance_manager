@@ -10,7 +10,7 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Finance AI",
+  title: "Finance Manager",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
         <ClerkProvider
           appearance={{
             baseTheme: dark,
-            variables: { colorPrimary: "#55B02E" },
+            variables: { colorPrimary: "#98FEBE" },
           }}
         >
           <div className="flex h-full flex-col overflow-hidden">{children}</div>

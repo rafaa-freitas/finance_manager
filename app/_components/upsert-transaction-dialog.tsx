@@ -78,6 +78,10 @@ function UpsertTransactionDialog({
   transactionId,
   defaultValues,
 }: UpsertTransactionDialogProps) {
+  if (defaultValues) {
+    defaultValues.date = new Date(defaultValues.date);
+  }
+
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: defaultValues ?? {

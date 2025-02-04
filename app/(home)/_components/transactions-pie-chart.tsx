@@ -63,7 +63,7 @@ function TransactionsPieChart({
 
   return (
     <Card className="flex flex-col p-6">
-      <CardContent className="flex-1 pb-0">
+      <CardContent className="flex flex-1 flex-col justify-between pb-0">
         <ChartContainer
           config={chartConfig}
           className="mx-auto aspect-square max-h-[250px]"
@@ -84,7 +84,7 @@ function TransactionsPieChart({
 
         <div className="space-y-3">
           <PercentageItem
-            icon={<TrendingUpIcon size={16} className="text-primary" />}
+            icon={<TrendingUpIcon size={16} className="text-success" />}
             title="Receita"
             value={typesPercentage[TransactionType.DEPOSIT]}
           />
